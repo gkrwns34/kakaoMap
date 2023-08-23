@@ -32,7 +32,7 @@ var marker = new kakao.maps.Marker({position:markerPos})
 //교통정보
 map.addOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
     
-function setcenter(lat, lng)
+function setCenter(lat, lng)
 {
     marker.setMap(null)
     var mp = new kakao.maps.LatLng(lat, lng)
