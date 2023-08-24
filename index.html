@@ -31,6 +31,9 @@ var marker = new kakao.maps.Marker({position:markerPos})
 
 //교통정보
 map.addOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
+
+//마커 배열(삭제)
+var markers = [];
     
 function setCenter(lat, lng)
 {
@@ -39,7 +42,9 @@ function setCenter(lat, lng)
     map.setCenter(mp)
     marker = new kakao.maps.Marker({position:mp})
     marker.setMap(map)
-    //생성된 마커를 배열에 추가
+    //마커 추가 (삭제)
+    addMarker(lat,lng)
+    //생성된 마커를 배열에 추가 (삭제)
     markers.push(marker)
 }    
     
