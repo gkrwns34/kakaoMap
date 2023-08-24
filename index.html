@@ -45,6 +45,7 @@ function addMarker(lat, lng)
     {
         var mp = new kakao.maos.LatLng(lat,lng)
         var marker = new kakao.maps.Marker({position:mp})
+        marker.setMap(map)
         addMarker(marker)
     }
     
