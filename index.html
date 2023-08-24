@@ -34,19 +34,24 @@ map.addOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
 
 //마커 배열(삭제)
 var markers = [];
-    
+    var i = 0;
 function setCenter(lat, lng)
 {
     marker.setMap(null)
     var mp = new kakao.maps.LatLng(lat, lng)
     map.setCenter(mp)
     marker = new kakao.maps.Marker({position:mp})
-    
+
+    if(i != 0)
+    {
     //마커 추가 (삭제)
-    clusterer.addMarker(marker)
+    clusterer.addMarker(marker)    
+    }
+    
     //생성된 마커를 배열에 추가 (삭제)
     markers.push(marker)
     marker.setMap(map)
+    i++
 }    
     
 //
