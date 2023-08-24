@@ -41,6 +41,15 @@ function setCenter(lat, lng)
     marker.setMap(map)  
 }    
     
+function addMarker(lat, lng)
+    {
+        marker.setmap(null)
+        var mp = new kakao.maps.LatLng(lat,lng)
+        map.setCenter(mp)
+        marker = new kakao.maps.Marker({position:mp})
+        marker.setMap(map)
+    }
+    
 //
     /*geocoder.addressSearch('경기도 안양시 만안구 박달2동', function(result, status) {
 
