@@ -39,6 +39,8 @@ function setCenter(lat, lng)
     map.setCenter(mp)
     marker = new kakao.maps.Marker({position:mp})
     marker.setMap(map)
+    //생성된 마커를 배열에 추가
+    markers.push(marker)
 }    
     
 //
