@@ -43,7 +43,7 @@ function setCenter(lat, lng)
     marker = new kakao.maps.Marker({position:mp})
     
     //마커 추가 (삭제)
-    addMarker(mp)
+    addMarker(mp);
     //생성된 마커를 배열에 추가 (삭제)
     markers.push(marker)
     marker.setMap(map)
