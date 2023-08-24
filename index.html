@@ -44,6 +44,9 @@ function setCenter(lat, lng)
 
     if(i != 0)
     {
+       var marker = new kakao.maps.Marker({
+    position: new kakao.maps.LatLng( lat, lng )
+    }) 
     //마커 추가 (삭제)
     clusterer.addMarker(marker)    
     }
